@@ -574,6 +574,25 @@ main>.season.is-live{height:340svh;min-height:0;padding:0}
   .season__note{font-size:13px}
 }
 
+/* ---------- tighter rhythm: sections are as tall as their content, 144px between blocks ---------- */
+html{--padt:96px;--padb:48px}
+@media (max-width:639px){html{--padt:72px;--padb:32px}}
+main>section:not(.hero),footer.closing,main>.pc:not(.is-live){min-height:0}
+/* the challenge scene fills its screen: all four texts stay open, the scroll lights them one by one */
+.pc--text.is-live .pc__steps{gap:clamp(20px,3.2svh,40px)}
+.pc--text.is-live .pc__step{transition:opacity 380ms var(--ease)}
+.pc--text.is-live .pc__step:not(.is-on){opacity:.36}
+.pc--text.is-live .pc__step h3{color:var(--ink);font-size:clamp(24px,2.4vw,36px)}
+.pc--text.is-live .pc__step p{grid-template-rows:1fr;opacity:1;font-size:clamp(16px,1.35vw,20px)}
+@media (min-width:1024px){.season__list li{min-height:clamp(40px,5.6svh,52px)}}
+main>.season.is-live{height:280svh}
+.season.is-live .wrap{justify-content:center}
+.season.is-live .season__body{flex:none}
+.pc--text.is-live .wrap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--gap);align-items:center}
+.pc--text.is-live .section-head{position:static;width:auto;margin:0}
+.pc--text.is-live .pc__steps{width:auto;margin:0}
+@media (max-width:639px){.g2a{min-height:0}.g2b{padding-top:var(--gap)}.faq .g2b{padding-top:0}}
+
 /* ---------- reduced motion, print ---------- */
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition-property:opacity,color,background-color,border-color!important;transition-duration:.01ms!important}
