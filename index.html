@@ -526,6 +526,54 @@ main>.season.is-live{height:340svh;min-height:0;padding:0}
   .bars--wide .bars__row{grid-template-columns:minmax(140px,50%) minmax(0,1fr) 44px}
 }
 
+/* ---------- the proposal's own content only: layout of its parts ---------- */
+.hero__eyebrow{margin-bottom:var(--s-4);font:500 13px/1.25 var(--font-text);color:var(--muted)}
+.sum{height:auto;top:50%;translate:0 -50%}
+.sum__head{height:48px;display:flex;align-items:center;padding:0 var(--s-5);border-bottom:1px solid var(--line);font:500 13px/1 var(--font-text);color:var(--muted)}
+.sum dl{margin:0}
+.sum__row{display:grid;grid-template-columns:128px minmax(0,1fr);column-gap:var(--s-4);padding:14px var(--s-5);border-bottom:1px solid var(--line);font-size:16px;line-height:1.4}
+.sum__row:last-child{border-bottom:0}
+.sum__row dt{color:var(--muted)}.sum__row dd{font-weight:500}
+.is-entering .sum__row{animation:m-up 620ms var(--ease-enter) both;animation-delay:calc(420ms + var(--i,0)*70ms)}
+.sum2{margin-top:var(--s-5);font-size:var(--t-lead);line-height:1.5;max-width:62ch}
+.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:var(--gap);row-gap:var(--s-5);margin-top:var(--s-7)}
+.metric b{display:block;font:var(--display-weight) var(--t-stat)/1.1 var(--font-display);letter-spacing:var(--display-tracking)}
+.metric>span{display:block;margin-top:var(--s-2);color:var(--muted);line-height:1.4}
+.card__p{margin-top:var(--s-2)}
+.card__note{margin-top:var(--s-4);font-size:13px;line-height:1.45;color:var(--muted)}
+.card .bars{margin-top:var(--s-4)}
+.app__panel{justify-content:space-between}
+.app__panel h3{font-size:var(--t-h3);line-height:1.2;letter-spacing:-0.02em;margin-top:var(--s-1)}
+.app__panel p{margin-top:var(--s-1)}
+.pane__num{font:var(--display-weight) clamp(56px,min(9.5vw,17svh),160px)/.9 var(--font-display);letter-spacing:-0.055em;color:var(--accent);margin-left:-.03em}
+.app__panel .pane__num{animation:pn-mock 760ms var(--ease-enter) both;margin-top:var(--s-2);color:var(--accent)}
+.app__total{padding-bottom:var(--s-4)}
+.season__note{margin-top:var(--s-4);font-size:13px;line-height:1.5;color:var(--muted);max-width:110ch}
+.pc--text.is-live .pc__steps{width:100%;grid-template-columns:minmax(0,1fr)}
+.pc--text.is-live .section-head{width:calc(50% - var(--gap)/2);position:absolute;left:0;top:0;margin:0}
+.pc--text.is-live .pc__steps{width:calc(50% - var(--gap)/2);margin-left:auto}
+.pc--text:not(.is-live) .pc__step h3{margin-top:0}
+.footer__col--nav{grid-column:6/span 3}
+@media (min-width:1024px) and (max-width:1279px){
+  .nav__links{display:none}.nav__bar{grid-template-columns:minmax(0,1fr) auto}.nav__toggle{display:inline-flex}.nav__actions{grid-column:2}
+  html.menu-open .sheet{display:flex}html.menu-open{overflow:hidden}
+  .sum__row{grid-template-columns:minmax(0,1fr);row-gap:2px;padding:10px var(--s-4)}
+}
+@media (max-width:1023px){
+  .hero{height:auto;min-height:100svh}.hero .wrap,.hero__grid{height:auto}
+  .hero__art{flex:none;height:auto;min-height:0}
+  .sum{position:relative;left:auto;right:auto;top:auto;translate:none;margin:var(--s-5)}
+  .metrics{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .footer__col--nav{grid-column:span 6}
+}
+@media (max-width:639px){
+  .hero__art{min-height:0}
+  .sum{margin:var(--s-4)}.sum__row{grid-template-columns:minmax(0,1fr);row-gap:2px;padding:10px var(--s-4)}
+  .metrics{margin-top:var(--s-6)}
+  .card__note{display:block}
+  .season__note{font-size:13px}
+}
+
 /* ---------- reduced motion, print ---------- */
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition-property:opacity,color,background-color,border-color!important;transition-duration:.01ms!important}
@@ -567,22 +615,16 @@ main>.season.is-live{height:340svh;min-height:0;padding:0}
            the gliding tab pill, the sweep round the recommended plan -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <defs>
-    <linearGradient id="tg-g" x1="50%" y1="0%" x2="50%" y2="100%"><stop stop-color="#2AABEE" offset="0%"/><stop stop-color="#229ED9" offset="100%"/></linearGradient>
-    <symbol id="i-telegram" viewBox="0 0 256 256"><path d="M128,0 C94.06,0 61.48,13.494 37.5,37.49 C13.5,61.486 0,94.066 0,128 C0,161.934 13.5,194.514 37.5,218.51 C61.48,242.506 94.06,256 128,256 C161.94,256 194.52,242.506 218.5,218.51 C242.5,194.514 256,161.934 256,128 C256,94.066 242.5,61.486 218.5,37.49 C194.52,13.494 161.94,0 128,0 Z" fill="url(#tg-g)"/><path d="M57.94,126.6476 C95.26,110.3916 120.14,99.6736 132.58,94.4956 C168.14,79.7096 175.52,77.1416 180.34,77.0547542 C181.4,77.0376 183.76,77.2996 185.3,78.5456 C186.58,79.5956 186.94,81.0156 187.12,82.0116 C187.28,83.0076 187.5,85.2776 187.32,87.0496 C185.4,107.2896 177.06,156.4056 172.82,179.0756 C171.04,188.668 167.5,191.884 164.08,192.198 C156.64,192.882 151,187.286 143.8,182.5676 C132.54,175.1816 126.18,170.5856 115.24,163.3796 C102.6,155.0516 110.8,150.4736 118,142.9936 C119.88,141.0356 152.64,111.2456 153.26,108.5436 C153.34,108.2056 153.42,106.9456 152.66,106.2816 C151.92,105.6156 150.82,105.8436 150.02,106.0236 C148.88,106.2796 130.9,118.1756 96.02,141.7096 C90.92,145.2176 86.3,146.9276 82.14,146.8376 C77.58,146.7396 68.78,144.2536 62.24,142.1296 C54.24,139.5236 47.86,138.1456 48.42,133.7196 C48.7,131.4156 51.88,129.0576 57.94,126.6476 Z" fill="#FFFFFF"/></symbol>
-    <symbol id="i-instagram" viewBox="0 0 256 256"><g>
-        <path d="M127.999746,23.06353 C162.177385,23.06353 166.225393,23.1936027 179.722476,23.8094161 C192.20235,24.3789926 198.979853,26.4642218 203.490736,28.2166477 C209.464938,30.5386501 213.729395,33.3128586 218.208268,37.7917319 C222.687141,42.2706052 225.46135,46.5350617 227.782844,52.5092638 C229.535778,57.0201472 231.621007,63.7976504 232.190584,76.277016 C232.806397,89.7746075 232.93647,93.8226147 232.93647,128.000254 C232.93647,162.177893 232.806397,166.225901 232.190584,179.722984 C231.621007,192.202858 229.535778,198.980361 227.782844,203.491244 C225.46135,209.465446 222.687141,213.729903 218.208268,218.208776 C213.729395,222.687649 209.464938,225.461858 203.490736,227.783352 C198.979853,229.536286 192.20235,231.621516 179.722476,232.191092 C166.227425,232.806905 162.179418,232.936978 127.999746,232.936978 C93.8200742,232.936978 89.772067,232.806905 76.277016,232.191092 C63.7971424,231.621516 57.0196391,229.536286 52.5092638,227.783352 C46.5345536,225.461858 42.2700971,222.687649 37.7912238,218.208776 C33.3123505,213.729903 30.538142,209.465446 28.2166477,203.491244 C26.4637138,198.980361 24.3784845,192.202858 23.808908,179.723492 C23.1930946,166.225901 23.0630219,162.177893 23.0630219,128.000254 C23.0630219,93.8226147 23.1930946,89.7746075 23.808908,76.2775241 C24.3784845,63.7976504 26.4637138,57.0201472 28.2166477,52.5092638 C30.538142,46.5350617 33.3123505,42.2706052 37.7912238,37.7917319 C42.2700971,33.3128586 46.5345536,30.5386501 52.5092638,28.2166477 C57.0196391,26.4642218 63.7971424,24.3789926 76.2765079,23.8094161 C89.7740994,23.1936027 93.8221066,23.06353 127.999746,23.06353 M127.999746,0 C93.2367791,0 88.8783247,0.147348072 75.2257637,0.770274749 C61.601148,1.39218523 52.2968794,3.55566141 44.1546281,6.72008828 C35.7374966,9.99121548 28.5992446,14.3679613 21.4833489,21.483857 C14.3674532,28.5997527 9.99070739,35.7380046 6.71958019,44.1551362 C3.55515331,52.2973875 1.39167714,61.6016561 0.769766653,75.2262718 C0.146839975,88.8783247 0,93.2372872 0,128.000254 C0,162.763221 0.146839975,167.122183 0.769766653,180.774236 C1.39167714,194.398852 3.55515331,203.703121 6.71958019,211.845372 C9.99070739,220.261995 14.3674532,227.400755 21.4833489,234.516651 C28.5992446,241.632547 35.7374966,246.009293 44.1546281,249.28042 C52.2968794,252.444847 61.601148,254.608323 75.2257637,255.230233 C88.8783247,255.85316 93.2367791,256 127.999746,256 C162.762713,256 167.121675,255.85316 180.773728,255.230233 C194.398344,254.608323 203.702613,252.444847 211.844864,249.28042 C220.261995,246.009293 227.400247,241.632547 234.516143,234.516651 C241.632039,227.400755 246.008785,220.262503 249.279912,211.845372 C252.444339,203.703121 254.607815,194.398852 255.229725,180.774236 C255.852652,167.122183 256,162.763221 256,128.000254 C256,93.2372872 255.852652,88.8783247 255.229725,75.2262718 C254.607815,61.6016561 252.444339,52.2973875 249.279912,44.1551362 C246.008785,35.7380046 241.632039,28.5997527 234.516143,21.483857 C227.400247,14.3679613 220.261995,9.99121548 211.844864,6.72008828 C203.702613,3.55566141 194.398344,1.39218523 180.773728,0.770274749 C167.121675,0.147348072 162.762713,0 127.999746,0 Z M127.999746,62.2703115 C91.698262,62.2703115 62.2698034,91.69877 62.2698034,128.000254 C62.2698034,164.301738 91.698262,193.730197 127.999746,193.730197 C164.30123,193.730197 193.729689,164.301738 193.729689,128.000254 C193.729689,91.69877 164.30123,62.2703115 127.999746,62.2703115 Z M127.999746,170.667175 C104.435741,170.667175 85.3328252,151.564259 85.3328252,128.000254 C85.3328252,104.436249 104.435741,85.3333333 127.999746,85.3333333 C151.563751,85.3333333 170.666667,104.436249 170.666667,128.000254 C170.666667,151.564259 151.563751,170.667175 127.999746,170.667175 Z M211.686338,59.6734287 C211.686338,68.1566129 204.809755,75.0337031 196.326571,75.0337031 C187.843387,75.0337031 180.966297,68.1566129 180.966297,59.6734287 C180.966297,51.1902445 187.843387,44.3136624 196.326571,44.3136624 C204.809755,44.3136624 211.686338,51.1902445 211.686338,59.6734287 Z" fill="currentColor"></path>
-    </g></symbol>
-    <symbol id="i-stack" viewBox="0 0 24 24"><rect x="2" y="2.5" width="20" height="5.5" rx="2.75"/><rect x="2" y="9.25" width="14" height="5.5" rx="2.75"/><rect x="2" y="16" width="8" height="5.5" rx="2.75"/></symbol>
+        <symbol id="i-stack" viewBox="0 0 24 24"><rect x="2" y="2.5" width="20" height="5.5" rx="2.75"/><rect x="2" y="9.25" width="14" height="5.5" rx="2.75"/><rect x="2" y="16" width="8" height="5.5" rx="2.75"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 12 12"><path d="M2 6h8M6.5 2.5 10 6l-3.5 3.5"/></symbol>
   </defs>
 </svg>
 
 <header class="nav nav--centre">
   <div class="wrap nav__bar">
-    <a class="skip-link" href="#top">Skip to content</a>
-    <a class="nav__logo" href="#top" aria-label="s10.run, to the top of the page"><svg class="mark" aria-hidden="true"><use href="#i-stack"/></svg>s10.run</a>
-    <nav class="nav__links" aria-label="Sections">
-      <a href="#placements">Placements</a><a href="#audience">Audience</a><a href="#packages">Packages</a><a href="#challenge">Challenge</a><a href="#team">Team</a>
+    <a class="nav__logo" href="#top"><svg class="mark" aria-hidden="true"><use href="#i-stack"/></svg>s10.run</a>
+    <nav class="nav__links">
+      <a href="#audience">Audience</a><a href="#challenge">The challenge</a><a href="#exposure">Brand exposure</a><a href="#options">Partnership options</a><a href="#team">Delivery team</a>
     </nav>
     <div class="nav__actions">
       <a class="btn btn--primary" href="https://s10.run/partners">Discuss partnership</a>
@@ -595,63 +637,115 @@ main>.season.is-live{height:340svh;min-height:0;padding:0}
   <span class="nav__progress" aria-hidden="true"></span>
 </header>
 <div class="sheet" id="sheet">
-  <a href="#placements">Placements</a><a href="#audience">Audience</a><a href="#packages">Packages</a><a href="#challenge">Challenge</a><a href="#team">Team</a>
+  <a href="#audience">Audience</a><a href="#challenge">The challenge</a><a href="#exposure">Brand exposure</a><a href="#options">Partnership options</a><a href="#team">Delivery team</a>
   <a class="btn btn--primary" href="https://s10.run/partners">Discuss partnership</a>
 </div>
 
 <main id="top">
-  <!-- 1 · hero (collage) -->
+  <!-- hero -->
   <section class="hero hero--collage" data-enter aria-labelledby="hero-h">
     <div class="wrap"><div class="grid hero__grid">
       <div class="hero__text">
+        <p class="hero__eyebrow">Winter season · starts in January</p>
         <h1 id="hero-h">12 weeks with an engaged community of runners.</h1>
-        <p class="hero__lead">s10.run is an online running platform with 50,000+ members, including 1,700+ runners in Europe. The Sub3 Winter Challenge gives one partner brand visibility across the winter season.</p>
-        <div class="btn-row"><a class="btn btn--primary" href="https://s10.run/partners">Discuss partnership</a><a class="btn btn--secondary" href="#placements">See the placements</a></div>
-        <p class="hero__proof">Winter season · starts in January</p>
+        <p class="hero__lead">s10.run is an online running platform with 50,000+ members, including 1,700+ runners in Europe. The platform brings together runners of different levels who take part in a variety of running challenges, track their progress and compete on leaderboards. The Sub3 Winter Challenge gives one partner brand visibility across the winter season.</p>
+        <div class="btn-row"><a class="btn btn--primary" href="https://s10.run/partners">Discuss partnership</a><a class="btn btn--secondary" href="#options">Partnership options</a></div>
+        <p class="hero__proof">Audience and contact volumes include estimates</p>
       </div>
-      <div class="hero__art" role="img" aria-label="The tournament home screen of the Sub3 Winter Challenge with the partner banner above the twelve weekly stages, and the title partner package: tournament naming rights, eight placement types, post-season audience report">
+      <div class="hero__art">
         <canvas class="hero__fx" aria-hidden="true"></canvas>
-        <div class="d-win" aria-hidden="true">
-          <div class="d-win__bar"><span class="d-dots"><i></i><i></i><i></i></span><span>s10.run · Tournament home screen</span></div>
-          <div class="d-win__body d-win__body--one">
-            <div class="d-main">
-              <div class="d-banner"><div><span>Twelve weekly stages</span><strong>Sub3 Winter Challenge</strong></div><span class="slot">Your brand</span></div>
-              <div class="d-rows">
-                <div class="d-row"><b>Stage 1</b></div>
-                <div class="d-row"><b>Stage 2</b></div>
-                <div class="d-row"><b>Stage 3</b></div>
-                <div class="d-row"><b>Stage 4</b></div>
-                <div class="d-row"><b>Stage 5</b></div>
-                <div class="d-row"><b>Stage 6</b></div>
-                <div class="d-row"><b>Stage 7</b></div>
-                <div class="d-row"><b>Stage 8</b></div>
-                <div class="d-row"><b>Stage 9</b></div>
-                <div class="d-row"><b>Stage 10</b></div>
-                <div class="d-row"><b>Stage 11</b></div>
-                <div class="d-row"><b>Stage 12</b></div>
-              </div>
-            </div>
-          </div>
+        <div class="d-win sum">
+          <div class="sum__head">Executive summary</div>
+          <dl>
+            <div class="sum__row"><dt>Audience</dt><dd>50,000+ platform members, including 1,700+ runners in Europe</dd></div>
+            <div class="sum__row"><dt>Deliverables</dt><dd>Naming rights, media support, 8 placement types, post-season report</dd></div>
+            <div class="sum__row"><dt>Projected volume</dt><dd>428,000 gross contacts across placements*</dd></div>
+            <div class="sum__row"><dt>Investment</dt><dd>€3,500 title · €1,500 category · prize in kind</dd></div>
+            <div class="sum__row"><dt>Schedule</dt><dd>Winter season · starts in January</dd></div>
+          </dl>
         </div>
-        <div class="d-note" aria-hidden="true" data-loop>
-          <div class="d-note__head"><b>Title partner</b><span class="chip chip--on" data-step>€3,500</span></div>
-          <div class="d-note__line" data-step><i></i><span>Tournament naming rights</span></div>
-          <div class="d-note__line" data-step><i></i><span>8 placement types</span></div>
-          <div class="d-note__line" data-step><i></i><span>Post-season audience report</span></div>
-        </div>
-        <button class="loop-pause" type="button" aria-pressed="false" aria-label="Pause the animation"><svg class="pause" viewBox="0 0 12 12" aria-hidden="true"><rect x="2" y="1.5" width="3" height="9" rx="1"/><rect x="7" y="1.5" width="3" height="9" rx="1"/></svg><svg class="play" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 1.6v8.8L10.4 6z"/></svg></button>
       </div>
     </div></div>
   </section>
 
-  <!-- 2 · placements (app-frame) -->
-  <section class="section" id="placements" aria-labelledby="placements-h">
+  <!-- executive summary (moment: word-highlight) -->
+  <section class="section mo-wh" id="summary" data-moment="word-highlight" aria-labelledby="summary-h">
     <div class="wrap">
-      <div class="section-head"><h2 id="placements-h">Media support and repeated visibility across the season</h2><p>Select a placement to see its delivery and projected contacts.</p></div>
+      <div class="section-head"><h2 id="summary-h">Executive summary</h2></div>
+      <p class="mo-wh__text">Reach an active community of runners through naming, repeated media exposure and integration into the s10.run challenge experience.</p>
+      <p class="sum2">The title partnership gives one brand category exclusivity and visibility across challenge communications, platform placements and supporting media channels.</p>
+      <div class="metrics">
+        <div class="metric"><b>50,000+</b><span>Members of the s10.run platform</span></div>
+        <div class="metric"><b>1,700+</b><span>Runners in Europe</span></div>
+        <div class="metric"><b>40%</b><span>Of the described audience are aged 35–44</span></div>
+        <div class="metric"><b>€3,500</b><span>Title partnership fee for the full season</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 01 · audience -->
+  <section class="section" id="audience" aria-labelledby="audience-h">
+    <div class="wrap">
+      <div class="section-head"><h2 id="audience-h">A focused, high-intent running audience</h2></div>
+      <div class="cards">
+          <div class="card card--6">
+            <h3 class="card__title">Who they are</h3>
+            <p class="card__p">Runners in Europe with different experience levels, training routines and goals. They take part in a variety of online running challenges on s10.run.</p>
+            <dl class="bars">
+              <div class="bars__row is-top"><dt>35–44</dt><span class="bars__track"><span class="bars__fill" style="--v:40%"></span></span><dd class="num">40%</dd></div>
+              <div class="bars__row"><dt>45–54</dt><span class="bars__track"><span class="bars__fill" style="--v:29%"></span></span><dd class="num">29%</dd></div>
+              <div class="bars__row"><dt>25–34</dt><span class="bars__track"><span class="bars__fill" style="--v:19%"></span></span><dd class="num">19%</dd></div>
+              <div class="bars__row"><dt>55+</dt><span class="bars__track"><span class="bars__fill" style="--v:12%"></span></span><dd class="num">12%</dd></div>
+            </dl>
+          </div>
+          <div class="card card--6">
+            <h3 class="card__title">Why the audience fits</h3>
+            <p class="card__p">Potential category fit: running footwear and gear, sports apparel, health and wellbeing, and services relevant to people living abroad.</p>
+            <dl class="bars bars--wide">
+              <div class="bars__row is-top"><dt>sport</dt><span class="bars__track"><span class="bars__fill" style="--v:96%"></span></span><dd class="num">96%</dd></div>
+              <div class="bars__row"><dt>apparel</dt><span class="bars__track"><span class="bars__fill" style="--v:89%"></span></span><dd class="num">89%</dd></div>
+              <div class="bars__row"><dt>health and wellbeing</dt><span class="bars__track"><span class="bars__fill" style="--v:85%"></span></span><dd class="num">85%</dd></div>
+              <div class="bars__row"><dt>financial services</dt><span class="bars__track"><span class="bars__fill" style="--v:79%"></span></span><dd class="num">79%</dd></div>
+            </dl>
+            <p class="card__note">Interest figures and audience behaviours are supplied in the original proposal; methodology was not included.</p>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 · the challenge (moment: pinned-chapters) -->
+  <section class="section pc pc--text" id="challenge" data-moment="pinned-chapters" aria-labelledby="challenge-h">
+    <div class="pc__stage"><div class="wrap">
+      <div class="section-head"><h2 id="challenge-h">One season. Twelve weekly stages. Multiple running challenges.</h2></div>
+      <div class="pc__steps">
+        <div class="pc__step is-on">
+          <h3>Train and compete</h3>
+          <p><span>Participants connect Garmin, Coros, Polar or Strava and take part in different running challenges on s10.run. The platform supports runners of different levels and tracks activity and progress through challenge formats and leaderboards.</span></p>
+        </div>
+        <div class="pc__step">
+          <h3>Track progress</h3>
+          <p><span>Participants follow their progress through the challenge and compare results on the leaderboard.</span></p>
+        </div>
+        <div class="pc__step">
+          <h3>Challenge leaderboards</h3>
+          <p><span>Each challenge has its own format, stages and leaderboard, with results determined by the relevant challenge rules.</span></p>
+        </div>
+        <div class="pc__step">
+          <h3>The s10.run platform</h3>
+          <p><span>s10.run has operated online running challenges since 2020 and has a community of 50,000+ members. Its autumn 2026 tournament recorded about 8,000 participants across 13 stages.</span></p>
+        </div>
+      </div>
+    </div></div>
+  </section>
+
+  <!-- 03 · brand exposure -->
+  <section class="section" id="exposure" aria-labelledby="exposure-h">
+    <div class="wrap">
+      <div class="section-head"><h2 id="exposure-h">Media support and repeated visibility across the season</h2></div>
       <div class="app">
         <div class="app__list">
-          <div class="app__head"><span class="t-label">Placement</span><span class="t-label">Projected contacts</span></div>
-          <div class="app__tabs" role="tablist" aria-label="Placements" aria-orientation="vertical">
+          <div class="app__head"><span class="t-label">Placement</span><span class="t-label">Projected contacts*</span></div>
+          <div class="app__tabs" role="tablist" aria-orientation="vertical">
             <button class="app__tab" role="tab" type="button" id="t-email" aria-controls="p-email" aria-selected="true"><span>Stage emails</span><span class="num">170,000</span></button>
             <button class="app__tab" role="tab" type="button" id="t-bot" aria-controls="p-bot" aria-selected="false" tabindex="-1"><span>Telegram bot</span><span class="num">51,000</span></button>
             <button class="app__tab" role="tab" type="button" id="t-posts" aria-controls="p-posts" aria-selected="false" tabindex="-1"><span>Channel posts</span><span class="num">60,000</span></button>
@@ -661,50 +755,58 @@ main>.season.is-live{height:340svh;min-height:0;padding:0}
             <button class="app__tab" role="tab" type="button" id="t-cert" aria-controls="p-cert" aria-selected="false" tabindex="-1"><span>Stage certificates</span><span class="num">6,000</span></button>
             <button class="app__tab" role="tab" type="button" id="t-entry" aria-controls="p-entry" aria-selected="false" tabindex="-1"><span>s10.run challenge entry page</span><span class="num">25,000</span></button>
           </div>
-          <div class="app__total"><span>Total</span><span class="num">428,000</span><small>Gross projected contact volume, not deduplicated reach or a guarantee of impressions.</small></div>
+          <div class="app__total"><span>Total</span><span class="num">428,000</span></div>
         </div>
         <div class="app__pane">
           <div class="app__panel" role="tabpanel" id="p-email" aria-labelledby="t-email">
-            <div><h3>Stage emails</h3><p>12 announcements + 12 results sends</p></div>
-            <div class="fit" role="img" aria-label="Stage emails: where the partner's logo sits"><div class="mk" aria-hidden="true"><div class="mk-row"><b>Stage emails</b><span class="slot">Your brand</span></div><div class="mk-band"><span class="t">Sub3 Winter Challenge</span></div><div class="mk-list"><div><span>Announcements</span><span class="num">12</span></div><div><span>Results sends</span><span class="num">12</span></div></div></div></div>
+            <div><span class="t-label">Placement</span><h3>Stage emails</h3></div>
+            <div><span class="t-label">Projected contacts*</span><p class="pane__num num" data-count="170000" data-pre="" data-suf="">170,000</p></div>
+            <div><span class="t-label">Delivery</span><p>12 announcements + 12 results sends</p></div>
           </div>
           <div class="app__panel" role="tabpanel" id="p-bot" aria-labelledby="t-bot" hidden>
-            <div><h3>Telegram bot</h3><p>12 stage notifications</p></div>
-            <div class="fit" role="img" aria-label="Telegram bot: where the partner's logo sits"><div class="mk" aria-hidden="true"><div class="mk-row"><span class="mk-row" style="justify-content:flex-start"><svg class="mk-ico"><use href="#i-telegram"/></svg><b>Telegram bot</b></span><span class="slot">Your brand</span></div><div class="mk-bubble"><span class="t">Sub3 Winter Challenge</span><span>Stage notification</span></div><div class="mk-list"><div><span>Stage notifications</span><span class="num">12</span></div></div></div></div>
+            <div><span class="t-label">Placement</span><h3>Telegram bot</h3></div>
+            <div><span class="t-label">Projected contacts*</span><p class="pane__num num" data-count="51000" data-pre="" data-suf="">51,000</p></div>
+            <div><span class="t-label">Delivery</span><p>12 stage notifications</p></div>
           </div>
           <div class="app__panel" role="tabpanel" id="p-posts" aria-labelledby="t-posts" hidden>
-            <div><h3>Channel posts</h3><p>24 media placements across @annarunning and @psychology_of_running</p></div>
-            <div class="fit" role="img" aria-label="Channel posts: where the partner's logo sits"><div class="mk" aria-hidden="true"><div class="mk-row"><b>Channel posts</b><span class="slot">Your brand</span></div><div class="mk-list"><div><span>@annarunning</span></div><div><span>@psychology_of_running</span></div><div><span>Media placements</span><span class="num">24</span></div></div></div></div>
+            <div><span class="t-label">Placement</span><h3>Channel posts</h3></div>
+            <div><span class="t-label">Projected contacts*</span><p class="pane__num num" data-count="60000" data-pre="" data-suf="">60,000</p></div>
+            <div><span class="t-label">Delivery</span><p>24 media placements across @annarunning and @psychology_of_running</p></div>
           </div>
           <div class="app__panel" role="tabpanel" id="p-ig" aria-labelledby="t-ig" hidden>
-            <div><h3>Instagram</h3><p>24 Instagram story and reel placements</p></div>
-            <div class="fit" role="img" aria-label="Instagram: where the partner's logo sits"><div class="mk" aria-hidden="true" style="flex-direction:row;align-items:center;gap:16px"><div class="mk-story"><span class="mu">Story</span><span class="t" style="font-size:14px">Sub3 Winter Challenge</span><span class="slot" style="height:20px;padding:0 5px;align-self:flex-start">Your brand</span></div><div style="display:flex;flex-direction:column;gap:9px;min-width:0"><div class="mk-row" style="justify-content:flex-start"><svg class="mk-ico" style="color:var(--ink)"><use href="#i-instagram"/></svg><b>Instagram</b></div><span>Story and reel placements</span><span class="t num">24</span></div></div></div>
+            <div><span class="t-label">Placement</span><h3>Instagram</h3></div>
+            <div><span class="t-label">Projected contacts*</span><p class="pane__num num" data-count="60000" data-pre="" data-suf="">60,000</p></div>
+            <div><span class="t-label">Delivery</span><p>24 Instagram story and reel placements</p></div>
           </div>
           <div class="app__panel" role="tabpanel" id="p-home" aria-labelledby="t-home" hidden>
-            <div><h3>Tournament home screen</h3><p>Banner for 12 weeks</p></div>
-            <div class="fit" role="img" aria-label="Tournament home screen: where the partner's logo sits"><div class="mk" aria-hidden="true"><div class="mk-row"><b>Tournament home screen</b></div><div class="mk-band" style="padding:12px"><span class="t">Sub3 Winter Challenge</span><div class="mk-row" style="justify-content:flex-start"><span class="mu">Banner</span><span class="slot">Your brand</span></div></div><div class="mk-row"><span>Banner</span><span class="mu">12 weeks</span></div></div></div>
+            <div><span class="t-label">Placement</span><h3>Tournament home screen</h3></div>
+            <div><span class="t-label">Projected contacts*</span><p class="pane__num num" data-count="26000" data-pre="" data-suf="">26,000</p></div>
+            <div><span class="t-label">Delivery</span><p>Banner for 12 weeks</p></div>
           </div>
           <div class="app__panel" role="tabpanel" id="p-stand" aria-labelledby="t-stand" hidden>
-            <div><h3>Standings and protocols</h3><p>Logo for 12 weeks</p></div>
-            <div class="fit" role="img" aria-label="Standings and protocols: where the partner's logo sits"><div class="mk" aria-hidden="true" style="gap:6px"><div class="mk-row"><b>Standings and protocols</b><span class="slot">Your brand</span></div><div class="mk-list mu"><div><span>1</span><span class="mk-bar" style="width:78%"></span></div><div><span>2</span><span class="mk-bar" style="width:74%"></span></div><div><span>3</span><span class="mk-bar" style="width:70%"></span></div><div><span>4</span><span class="mk-bar" style="width:66%"></span></div><div><span>5</span><span class="mk-bar" style="width:62%"></span></div></div></div></div>
+            <div><span class="t-label">Placement</span><h3>Standings and protocols</h3></div>
+            <div><span class="t-label">Projected contacts*</span><p class="pane__num num" data-count="30000" data-pre="" data-suf="">30,000</p></div>
+            <div><span class="t-label">Delivery</span><p>Logo for 12 weeks</p></div>
           </div>
           <div class="app__panel" role="tabpanel" id="p-cert" aria-labelledby="t-cert" hidden>
-            <div><h3>Stage certificates</h3><p>Up to 6,000 issued</p></div>
-            <div class="fit" role="img" aria-label="Stage certificates: where the partner's logo sits"><div class="mk mk--cert" aria-hidden="true"><span class="mu">Stage certificate</span><span class="t" style="font-size:20px">Sub3 Winter Challenge</span><div class="mk-rule" style="width:56px;margin:4px 0"></div><span class="slot">Your brand</span><span class="mu">Up to 6,000 issued</span></div></div>
+            <div><span class="t-label">Placement</span><h3>Stage certificates</h3></div>
+            <div><span class="t-label">Projected contacts*</span><p class="pane__num num" data-count="6000" data-pre="" data-suf="">6,000</p></div>
+            <div><span class="t-label">Delivery</span><p>Up to 6,000 issued</p></div>
           </div>
           <div class="app__panel" role="tabpanel" id="p-entry" aria-labelledby="t-entry" hidden>
-            <div><h3>s10.run challenge entry page</h3><p>Partner placement on the challenge entry page</p></div>
-            <div class="fit" role="img" aria-label="s10.run challenge entry page: where the partner's logo sits"><div class="mk" aria-hidden="true"><div class="mk-row"><span class="mu">s10.run</span></div><span class="t" style="font-size:20px">Sub3 Winter Challenge</span><span>Challenge entry page</span><div class="mk-row" style="margin-top:auto;justify-content:flex-start"><span class="mu">Partner placement</span><span class="slot">Your brand</span></div></div></div>
+            <div><span class="t-label">Placement</span><h3>s10.run challenge entry page</h3></div>
+            <div><span class="t-label">Projected contacts*</span><p class="pane__num num" data-count="25000" data-pre="" data-suf="">25,000</p></div>
+            <div><span class="t-label">Delivery</span><p>Partner placement on the challenge entry page</p></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 3 · the total (scroll scene): the eight placement estimates of the proposal, summed as the page scrolls -->
+  <!-- the total (scroll scene): the placement estimates of the proposal, summed as the page scrolls -->
   <section class="section season" id="contacts" data-moment="season" aria-labelledby="season-h">
     <div class="season__stage"><div class="wrap">
-      <div class="section-head"><h2 id="season-h">428,000 gross contacts across placements</h2><p>The sum of the supplied placement estimates. Actual delivery should be confirmed in the post-season report.</p></div>
+      <div class="section-head"><h2 id="season-h">428,000 gross contacts across placements*</h2></div>
       <div class="season__body">
         <p class="season__num" aria-hidden="true" data-s="num">428,000</p>
         <ul class="rows season__list">
@@ -719,53 +821,15 @@ main>.season.is-live{height:340svh;min-height:0;padding:0}
         </ul>
       </div>
       <div class="season__track" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-      <div class="season__ends"><span><span class="num" data-s="count">8</span> of 8 placement types</span><span>Email volume is based on sends</span></div>
+      <p class="season__note">*Gross projected contact volume, calculated by summing the supplied placement estimates. It is not deduplicated reach or a guarantee of impressions. Email volume is based on sends. Actual delivery should be confirmed in the post-season report.</p>
     </div></div>
   </section>
 
-  <!-- 4 · the platform (statement; moment: word-highlight) -->
-  <section class="section mo-wh" id="platform" data-moment="word-highlight" aria-labelledby="platform-h">
-    <div class="wrap">
-      <div class="section-head"><h2 id="platform-h">The s10.run platform</h2></div>
-      <p class="mo-wh__text">s10.run has operated online running challenges since 2020 and has a community of <strong>50,000+ members</strong>. Its autumn 2026 tournament recorded about 8,000 participants across 13 stages.</p>
-    </div>
-  </section>
-
-  <!-- 5 · audience -->
-  <section class="section" id="audience" aria-labelledby="audience-h">
-    <div class="wrap">
-      <div class="section-head"><h2 id="audience-h">A focused, high-intent running audience</h2><p>Runners in Europe with different experience levels, training routines and goals.</p></div>
-      <div class="cards">
-          <div class="card card--6">
-            <span class="t-label">Who they are</span>
-            <p class="stat" style="margin-top:var(--s-2)">40% are aged 35–44</p>
-            <dl class="bars">
-              <div class="bars__row is-top"><dt>35–44</dt><span class="bars__track"><span class="bars__fill" style="--v:40%"></span></span><dd class="num">40%</dd></div>
-              <div class="bars__row"><dt>45–54</dt><span class="bars__track"><span class="bars__fill" style="--v:29%"></span></span><dd class="num">29%</dd></div>
-              <div class="bars__row"><dt>25–34</dt><span class="bars__track"><span class="bars__fill" style="--v:19%"></span></span><dd class="num">19%</dd></div>
-              <div class="bars__row"><dt>55+</dt><span class="bars__track"><span class="bars__fill" style="--v:12%"></span></span><dd class="num">12%</dd></div>
-            </dl>
-          </div>
-          <div class="card card--6">
-            <span class="t-label">Reported interest profile</span>
-            <p class="stat" style="margin-top:var(--s-2)">96% sport</p>
-            <dl class="bars bars--wide">
-              <div class="bars__row is-top"><dt>Sport</dt><span class="bars__track"><span class="bars__fill" style="--v:96%"></span></span><dd class="num">96%</dd></div>
-              <div class="bars__row"><dt>Apparel</dt><span class="bars__track"><span class="bars__fill" style="--v:89%"></span></span><dd class="num">89%</dd></div>
-              <div class="bars__row"><dt>Health and wellbeing</dt><span class="bars__track"><span class="bars__fill" style="--v:85%"></span></span><dd class="num">85%</dd></div>
-              <div class="bars__row"><dt>Financial services</dt><span class="bars__track"><span class="bars__fill" style="--v:79%"></span></span><dd class="num">79%</dd></div>
-            </dl>
-          </div>
-      </div>
-      <p class="aud-note">Potential category fit: running footwear and gear, sports apparel, health and wellbeing, and services relevant to people living abroad. Interest figures and audience behaviours are supplied in the original proposal; methodology was not included.</p>
-    </div>
-  </section>
-
-  <!-- 6 · partnership options (pricing-three) -->
-  <section class="section g2 g2--cards" id="packages" aria-labelledby="packages-h">
+  <!-- 04 · partnership options -->
+  <section class="section g2 g2--cards" id="options" aria-labelledby="options-h">
     <div class="wrap">
       <div class="g2a">
-        <div class="section-head"><h2 id="packages-h">Choose your level of presence</h2><p>€3,500 title · €1,500 category · prize in kind</p></div>
+        <div class="section-head"><h2 id="options-h">Choose your level of presence</h2></div>
           <div class="card card--4 plan plan--main">
             <span class="t-label">Recommended</span>
             <h3 class="card__title">Title partner</h3>
@@ -793,42 +857,7 @@ main>.season.is-live{height:340svh;min-height:0;padding:0}
     </div>
   </section>
 
-  <!-- 7 · the challenge (moment: pinned-chapters) -->
-  <section class="section pc" id="challenge" data-moment="pinned-chapters" aria-labelledby="challenge-h">
-    <div class="pc__stage"><div class="wrap">
-      <div class="section-head"><h2 id="challenge-h">One season. Twelve weekly stages. Multiple running challenges.</h2></div>
-      <div class="pc__steps">
-        <div class="pc__step is-on">
-          <h3>Train and compete</h3>
-          <p><span>Participants connect Garmin, Coros, Polar or Strava and take part in different running challenges on s10.run. The platform supports runners of different levels and tracks activity and progress through challenge formats and leaderboards.</span></p>
-          <div class="pc__visual fit" role="img" aria-label="Garmin, Coros, Polar and Strava, the services participants connect"><div class="mk" aria-hidden="true" style="gap:4px">
-            <div class="mk-row"><b>Participants connect</b><span class="mu">s10.run</span></div>
-            <div class="mk-list"><div><span>Garmin</span></div><div><span>Coros</span></div><div><span>Polar</span></div><div><span>Strava</span></div></div>
-          </div></div>
-        </div>
-        <div class="pc__step">
-          <h3>Track progress</h3>
-          <p><span>Participants follow their progress through the challenge and compare results on the leaderboard.</span></p>
-          <div class="pc__visual fit" role="img" aria-label="Twelve weekly stages of the Sub3 Winter Challenge"><div class="mk" aria-hidden="true">
-            <div class="mk-row"><span class="mu">Sub3 Winter Challenge</span></div>
-            <span class="t" style="font-size:24px">Twelve weekly stages</span>
-            <div class="mk-dots"><i class="done" style="--i:0"></i><i class="done" style="--i:1"></i><i class="done" style="--i:2"></i><i class="done" style="--i:3"></i><i class="done" style="--i:4"></i><i class="done" style="--i:5"></i><i class="done" style="--i:6"></i><i class="done" style="--i:7"></i><i class="done" style="--i:8"></i><i class="done" style="--i:9"></i><i class="done" style="--i:10"></i><i class="done" style="--i:11"></i></div>
-            <div class="mk-row" style="margin-top:auto"><span>Progress</span><span class="mu">Leaderboard</span></div>
-          </div></div>
-        </div>
-        <div class="pc__step">
-          <h3>Challenge leaderboards</h3>
-          <p><span>Each challenge has its own format, stages and leaderboard, with results determined by the relevant challenge rules.</span></p>
-          <div class="pc__visual fit" role="img" aria-label="A challenge leaderboard"><div class="mk" aria-hidden="true" style="gap:6px">
-            <div class="mk-row"><b>Leaderboard</b><span class="mu">Challenge rules</span></div>
-            <div class="mk-list mu"><div><span>1</span><span class="mk-bar" style="width:80%"></span></div><div><span>2</span><span class="mk-bar" style="width:76%"></span></div><div><span>3</span><span class="mk-bar" style="width:72%"></span></div><div><span>4</span><span class="mk-bar" style="width:68%"></span></div><div><span>5</span><span class="mk-bar" style="width:64%"></span></div></div>
-          </div></div>
-        </div>
-      </div>
-    </div></div>
-  </section>
-
-  <!-- 8 · delivery team -->
+  <!-- 05 · delivery team -->
   <section class="section g2 faq" id="team" aria-labelledby="team-h">
     <div class="wrap">
       <div class="g2a">
@@ -843,7 +872,7 @@ main>.season.is-live{height:340svh;min-height:0;padding:0}
   </section>
 </main>
 
-<!-- 9 · close-type + footer-statement -->
+<!-- next step + footer -->
 <footer class="footer closing footer--statement" id="contact">
   <div class="wrap">
     <div class="closing__cta close--type">
@@ -852,10 +881,10 @@ main>.season.is-live{height:340svh;min-height:0;padding:0}
       <a class="btn btn--primary btn--xl" href="https://s10.run/partners">Discuss partnership<svg class="m-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
     </div>
     <div class="closing__links">
-      <a class="nav__logo footer__brand" href="#top" aria-label="s10.run, to the top of the page"><svg class="mark" aria-hidden="true"><use href="#i-stack"/></svg>s10.run</a>
-      <nav class="footer__col footer__col--nav" aria-label="Proposal"><h3>Proposal</h3><a href="#placements">Placements</a><a href="#audience">Audience</a><a href="#packages">Packages</a><a href="#challenge">Challenge</a><a href="#team">Team</a></nav>
-      <div class="footer__col"><h3>Contact</h3><a href="https://t.me/annarunning">Anna Iogansen · Telegram</a></div>
-      <p class="footer__legal"><span>s10.run</span><span>Audience and contact volumes include estimates.</span><span>Product names and logos are trademarks of their owners.</span></p>
+      <a class="nav__logo footer__brand" href="#top"><svg class="mark" aria-hidden="true"><use href="#i-stack"/></svg>s10.run</a>
+      <nav class="footer__col footer__col--nav"><a href="#audience">Audience</a><a href="#challenge">The challenge</a><a href="#exposure">Brand exposure</a><a href="#options">Partnership options</a><a href="#team">Delivery team</a></nav>
+      <div class="footer__col"><h3>Contact</h3><a href="https://t.me/annarunning">Anna Iogansen · Telegram</a><a href="https://s10.run/partners">s10.run/partners</a></div>
+      <p class="footer__legal"><span>Audience and contact volumes include estimates</span></p>
     </div>
   </div>
 </footer>
@@ -869,7 +898,7 @@ main>.season.is-live{height:340svh;min-height:0;padding:0}
 
   /* 1 · the hero's entrance, once on load */
   function enter(){
-    var hero=$('[data-enter]');if(hero)$$('.d-banner,.d-row',hero).forEach(function(el,i){el.style.setProperty('--i',i)});if(!hero||reduced||!root.classList.contains('m-enter')){root.classList.add('m-enter-done');return}
+    var hero=$('[data-enter]');if(hero)$$('.sum__row',hero).forEach(function(el,i){el.style.setProperty('--i',i)});if(!hero||reduced||!root.classList.contains('m-enter')){root.classList.add('m-enter-done');return}
     var h1=$('h1',hero),text=h1.textContent,words=text.split(/\s+/).filter(Boolean);
     h1.setAttribute('aria-label',text);
     h1.innerHTML=words.map(function(w){return '<span class="m-w" aria-hidden="true"><span>'+w+'</span></span>'}).join(' ');
@@ -895,7 +924,7 @@ main>.season.is-live{height:340svh;min-height:0;padding:0}
 
   /* 3 · placements: click or arrow keys */
   var tabs=$$('.app__tab');
-  function pick(t,focus){tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;$('#'+x.getAttribute('aria-controls')).hidden=!on});if(focus)t.focus();fit();moveInd()}
+  function pick(t,focus){tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;$('#'+x.getAttribute('aria-controls')).hidden=!on});if(focus)t.focus();fit();moveInd();if(!reduced)$$('[data-count]',$('#'+t.getAttribute('aria-controls'))).forEach(function(c){countUp(c,0)})}
   tabs.forEach(function(t,i){
     t.addEventListener('click',function(){pick(t)});
     t.addEventListener('keydown',function(e){var k=e.key,n=tabs.length,j=k==='ArrowDown'||k==='ArrowRight'?(i+1)%n:k==='ArrowUp'||k==='ArrowLeft'?(i+n-1)%n:k==='Home'?0:k==='End'?n-1:-1;if(j>-1){e.preventDefault();pick(tabs[j],true)}});
@@ -961,12 +990,12 @@ main>.season.is-live{height:340svh;min-height:0;padding:0}
   // sections arrive as they are scrolled to
   var rvOn=root.classList.contains('js-rv')&&!reduced,rvCheck=function(){};
   if(rvOn){
-    $$('.card .stat,.bars dd,.app__total .num').forEach(tagCount);
+    $$('.card .stat,.bars dd,.app__total .num,.metric b').forEach(tagCount);
     $$('.bars').forEach(function(b){$$('.bars__fill',b).forEach(function(x,i){x.style.setProperty('--i',i)})});
     var seen=new Map();
     var mark=function(sel,type,step,base){$$(sel).forEach(function(el){if(el.closest('.hero'))return;var sec=el.closest('section,footer'),k=sel+'|'+(sec?sec.id:''),i=seen.get(k)||0;seen.set(k,i+1);el.setAttribute('data-rv',type);var dl=(base||0)+i*(step||0);if(dl)el.style.setProperty('--rv-d',dl+'ms')})};
     mark('main>section:not(.hero) h2,footer.closing h2','clip');
-    mark('.section-head p,.closing__cta p,.aud-note,.mo-wh__text,.season__list,.season__track,.season__ends','up',0,140);
+    mark('.section-head p,.closing__cta p,.sum2,.metrics,.season__note,.mo-wh__text,.season__list,.season__track,.season__ends','up',0,140);
     mark('.app,.season__num','zoom',0,120);
     mark('.card','up',120,120);mark('.faq__item','up',90,100);
     mark('.closing__cta .btn--xl','up',0,260);mark('.closing__links','up',0,200);
@@ -984,7 +1013,7 @@ main>.season.is-live{height:340svh;min-height:0;padding:0}
   if(season){sEl.num=$('[data-s="num"]',season);sEl.count=$('[data-s="count"]',season);segs=$$('.season__track i',season);sRows=$$('.season__list li',season)}
   function setSeason(x){if(!season)return;var key=Math.round(x*400);if(key===sLast)return;sLast=key;var full=Math.min(8,Math.floor(x)),sum=0,i;
     for(i=0;i<full;i++)sum+=sVals[i];if(full<8)sum+=Math.round(sVals[full]*(x-full)/1000)*1000;
-    sEl.num.textContent=sum.toLocaleString('en-US');sEl.count.textContent=Math.min(8,Math.ceil(x));
+    sEl.num.textContent=sum.toLocaleString('en-US');
     sRows.forEach(function(r,n){r.classList.toggle('is-on',n<x)});
     segs.forEach(function(sg,n){sg.style.setProperty('--f',Math.max(0,Math.min(1,x-n)).toFixed(3))});season.classList.toggle('is-done',x>=8)}
   var sMq=matchMedia('(min-height:600px)');
@@ -1031,7 +1060,7 @@ main>.season.is-live{height:340svh;min-height:0;padding:0}
   tg.addEventListener('click',function(){menu(tg.getAttribute('aria-expanded')!=='true')});
   sheet.addEventListener('click',function(){menu(false)});
   d.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classList.contains('menu-open')){menu(false);tg.focus()}});
-  matchMedia('(min-width:1024px)').addEventListener('change',function(e){if(e.matches)menu(false)});
+  matchMedia('(min-width:1280px)').addEventListener('change',function(e){if(e.matches)menu(false)});
 })();
 </script>
 </body>
