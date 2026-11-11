@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="page-type" content="software">
 <meta name="site-kind" content="software">
-<title>s10.run: title partnership of the Sub3 Winter Challenge</title>
-<meta name="description" content="One partner brand reaches the s10.run running community across 12 weekly stages from January: naming rights, eight placements and a post-season report.">
-<meta property="og:title" content="s10.run: title partnership of the Sub3 Winter Challenge">
-<meta property="og:description" content="One partner brand reaches the s10.run running community across 12 weekly stages from January.">
+<title>Sub3 Winter Challenge | Partnership proposal</title>
+<meta name="description" content="s10.run is an online running platform with 50,000+ members. The Sub3 Winter Challenge gives one partner brand visibility across the winter season.">
+<meta property="og:title" content="Sub3 Winter Challenge | Partnership proposal">
+<meta property="og:description" content="The Sub3 Winter Challenge gives one partner brand visibility across the winter season.">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0f0f0f">
@@ -502,6 +502,30 @@ main>.season.is-live{height:340svh;min-height:0;padding:0}
 @keyframes dot-in{from{transform:scaleX(0);opacity:.2}}
 @keyframes you-up{from{transform:translateY(22px)}}
 
+/* ---------- content from the proposal: layout of the new parts ---------- */
+.d-win__body--one{grid-template-columns:minmax(0,1fr)}
+@media (min-width:1400px){.hero h1{font-size:58px}}
+.d-row .mu{color:var(--muted);font-size:13px}
+.bars--wide .bars__row{grid-template-columns:minmax(150px,46%) minmax(0,1fr) 48px}
+.season__num{grid-column:1/span 8;font-size:clamp(64px,min(15.5vw,30svh),230px);letter-spacing:-0.055em;margin-left:-.03em}
+.season__list{grid-column:9/span 4;margin-top:0}
+.season__list li{min-height:40px;padding:6px 0;transition:opacity 320ms var(--ease)}
+.season.is-live .season__list li:not(.is-on){opacity:.32}
+.season__track{grid-template-columns:repeat(8,minmax(0,1fr))}
+.season__ends{gap:var(--s-4)}
+@media (max-width:1023px){
+  .season__body{grid-template-columns:minmax(0,1fr);row-gap:var(--s-5);align-content:end}
+  .season__num,.season__list{grid-column:1/-1}
+  .season__num{font-size:clamp(64px,min(23vw,22svh),200px)}
+}
+@media (max-width:639px){
+  .season__num{font-size:clamp(64px,23vw,120px)}
+  .season__list li{min-height:34px;padding:4px 0}
+  .season__ends>span:last-child{display:none}
+  .app__tab{height:auto;min-height:44px;line-height:1.15;font-size:13px}
+  .bars--wide .bars__row{grid-template-columns:minmax(140px,50%) minmax(0,1fr) 44px}
+}
+
 /* ---------- reduced motion, print ---------- */
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition-property:opacity,color,background-color,border-color!important;transition-duration:.01ms!important}
@@ -530,15 +554,16 @@ main>.season.is-live{height:340svh;min-height:0;padding:0}
 </head>
 <body>
 <!-- tasteskill 2.5 plan
+     content: every word and figure comes from Sub3_Winter_Challenge_Partnership_Proposal.html; nothing else is stated
      kind: software (page type software, site-kind software)
-     deal: hero collage · palette soot-pale-lime (winter stages are run in the dark; pale lime is the hi-vis colour of running kit)
+     deal: hero collage · palette soot-pale-lime
            · type instrument · radius soft · nav-centre · footer-statement · close-type · rhythm space · buttons tonal · mark stack
            · moments word-highlight (#platform: the platform's record lights up as it is read) and pinned-chapters (#challenge:
              four steps of a stage week in the space of one frame; dealt again from line-carries-colour, which needs a ground change
              the space rhythm does not have) · effect: one quiet CSS ground in the hero frame · loop: the hero's result card
      motion: hero entrance (the offer arrives first, then what to do) · hover and press on every link and button
      motion+ (the client asked for much more movement than the skill deals: these go past its motion rules on purpose):
-           the season scroll scene (#season), section reveals, counters, the hero's pace lines, pointer depth and light,
+           the scroll scene that sums the eight placement estimates (#contacts), section reveals, counters, the hero's pace lines, pointer depth and light,
            the gliding tab pill, the sweep round the recommended plan -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <defs>
@@ -557,7 +582,7 @@ main>.season.is-live{height:340svh;min-height:0;padding:0}
     <a class="skip-link" href="#top">Skip to content</a>
     <a class="nav__logo" href="#top" aria-label="s10.run, to the top of the page"><svg class="mark" aria-hidden="true"><use href="#i-stack"/></svg>s10.run</a>
     <nav class="nav__links" aria-label="Sections">
-      <a href="#placements">Placements</a><a href="#audience">Audience</a><a href="#packages">Packages</a><a href="#challenge">Challenge</a><a href="#questions">Questions</a>
+      <a href="#placements">Placements</a><a href="#audience">Audience</a><a href="#packages">Packages</a><a href="#challenge">Challenge</a><a href="#team">Team</a>
     </nav>
     <div class="nav__actions">
       <a class="btn btn--primary" href="https://s10.run/partners">Discuss partnership</a>
@@ -570,7 +595,7 @@ main>.season.is-live{height:340svh;min-height:0;padding:0}
   <span class="nav__progress" aria-hidden="true"></span>
 </header>
 <div class="sheet" id="sheet">
-  <a href="#placements">Placements</a><a href="#audience">Audience</a><a href="#packages">Packages</a><a href="#challenge">Challenge</a><a href="#questions">Questions</a>
+  <a href="#placements">Placements</a><a href="#audience">Audience</a><a href="#packages">Packages</a><a href="#challenge">Challenge</a><a href="#team">Team</a>
   <a class="btn btn--primary" href="https://s10.run/partners">Discuss partnership</a>
 </div>
 
@@ -579,41 +604,40 @@ main>.season.is-live{height:340svh;min-height:0;padding:0}
   <section class="hero hero--collage" data-enter aria-labelledby="hero-h">
     <div class="wrap"><div class="grid hero__grid">
       <div class="hero__text">
-        <h1 id="hero-h">Title partnership of a 12-&#8288;week running challenge</h1>
-        <p class="hero__lead">s10.run is an online running platform with 50,000+ members. The Sub3 Winter Challenge puts one partner brand in front of them across 12 weekly stages, starting in January.</p>
+        <h1 id="hero-h">12 weeks with an engaged community of runners.</h1>
+        <p class="hero__lead">s10.run is an online running platform with 50,000+ members, including 1,700+ runners in Europe. The Sub3 Winter Challenge gives one partner brand visibility across the winter season.</p>
         <div class="btn-row"><a class="btn btn--primary" href="https://s10.run/partners">Discuss partnership</a><a class="btn btn--secondary" href="#placements">See the placements</a></div>
-        <p class="hero__proof">Title partnership €3,500 for the full season.</p>
+        <p class="hero__proof">Winter season · starts in January</p>
       </div>
-      <div class="hero__art" role="img" aria-label="The Sub3 Winter Challenge home screen on s10.run with the title partner's banner above the list of weekly stages, and a results email sent with the partner's logo">
+      <div class="hero__art" role="img" aria-label="The tournament home screen of the Sub3 Winter Challenge with the partner banner above the twelve weekly stages, and the title partner package: tournament naming rights, eight placement types, post-season audience report">
         <canvas class="hero__fx" aria-hidden="true"></canvas>
         <div class="d-win" aria-hidden="true">
-          <div class="d-win__bar"><span class="d-dots"><i></i><i></i><i></i></span><span>s10.run · Sub3 Winter Challenge</span></div>
-          <div class="d-win__body">
-            <div class="d-side"><span class="is-on">Home</span><span>Stages</span><span>Standings</span><span>Certificates</span></div>
+          <div class="d-win__bar"><span class="d-dots"><i></i><i></i><i></i></span><span>s10.run · Tournament home screen</span></div>
+          <div class="d-win__body d-win__body--one">
             <div class="d-main">
-              <div class="d-banner"><div><span>12 weekly stages</span><strong>Sub3 Winter Challenge</strong></div><span class="slot">Your brand</span></div>
+              <div class="d-banner"><div><span>Twelve weekly stages</span><strong>Sub3 Winter Challenge</strong></div><span class="slot">Your brand</span></div>
               <div class="d-rows">
-                <div class="d-row"><b>Stage 1</b><span class="chip">Results</span></div>
-                <div class="d-row"><b>Stage 2</b><span class="chip">Results</span></div>
-                <div class="d-row"><b>Stage 3</b><span class="chip chip--on">This week</span></div>
-                <div class="d-row"><b>Stage 4</b><span class="chip">Upcoming</span></div>
-                <div class="d-row"><b>Stage 5</b><span class="chip">Upcoming</span></div>
-                <div class="d-row"><b>Stage 6</b><span class="chip">Upcoming</span></div>
-                <div class="d-row"><b>Stage 7</b><span class="chip">Upcoming</span></div>
-                <div class="d-row"><b>Stage 8</b><span class="chip">Upcoming</span></div>
-                <div class="d-row"><b>Stage 9</b><span class="chip">Upcoming</span></div>
-                <div class="d-row"><b>Stage 10</b><span class="chip">Upcoming</span></div>
-                <div class="d-row"><b>Stage 11</b><span class="chip">Upcoming</span></div>
-                <div class="d-row"><b>Stage 12</b><span class="chip">Upcoming</span></div>
+                <div class="d-row"><b>Stage 1</b></div>
+                <div class="d-row"><b>Stage 2</b></div>
+                <div class="d-row"><b>Stage 3</b></div>
+                <div class="d-row"><b>Stage 4</b></div>
+                <div class="d-row"><b>Stage 5</b></div>
+                <div class="d-row"><b>Stage 6</b></div>
+                <div class="d-row"><b>Stage 7</b></div>
+                <div class="d-row"><b>Stage 8</b></div>
+                <div class="d-row"><b>Stage 9</b></div>
+                <div class="d-row"><b>Stage 10</b></div>
+                <div class="d-row"><b>Stage 11</b></div>
+                <div class="d-row"><b>Stage 12</b></div>
               </div>
             </div>
           </div>
         </div>
         <div class="d-note" aria-hidden="true" data-loop>
-          <div class="d-note__head"><b>Stage 2 results email</b><span class="chip chip--on" data-step>Sent</span></div>
-          <div class="d-note__line" data-step><i></i><span>Partner logo in the header</span></div>
-          <div class="d-note__line" data-step><i></i><span>Link to the standings</span></div>
-          <div class="d-note__line" data-step><i></i><span>1 of 24 sends this season</span></div>
+          <div class="d-note__head"><b>Title partner</b><span class="chip chip--on" data-step>€3,500</span></div>
+          <div class="d-note__line" data-step><i></i><span>Tournament naming rights</span></div>
+          <div class="d-note__line" data-step><i></i><span>8 placement types</span></div>
+          <div class="d-note__line" data-step><i></i><span>Post-season audience report</span></div>
         </div>
         <button class="loop-pause" type="button" aria-pressed="false" aria-label="Pause the animation"><svg class="pause" viewBox="0 0 12 12" aria-hidden="true"><rect x="2" y="1.5" width="3" height="9" rx="1"/><rect x="7" y="1.5" width="3" height="9" rx="1"/></svg><svg class="play" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 1.6v8.8L10.4 6z"/></svg></button>
       </div>
@@ -623,7 +647,7 @@ main>.season.is-live{height:340svh;min-height:0;padding:0}
   <!-- 2 · placements (app-frame) -->
   <section class="section" id="placements" aria-labelledby="placements-h">
     <div class="wrap">
-      <div class="section-head"><h2 id="placements-h">Eight placements over 12 weeks</h2><p>The title partner appears in every one. Select a placement to see where the logo sits.</p></div>
+      <div class="section-head"><h2 id="placements-h">Media support and repeated visibility across the season</h2><p>Select a placement to see its delivery and projected contacts.</p></div>
       <div class="app">
         <div class="app__list">
           <div class="app__head"><span class="t-label">Placement</span><span class="t-label">Projected contacts</span></div>
@@ -632,123 +656,89 @@ main>.season.is-live{height:340svh;min-height:0;padding:0}
             <button class="app__tab" role="tab" type="button" id="t-bot" aria-controls="p-bot" aria-selected="false" tabindex="-1"><span>Telegram bot</span><span class="num">51,000</span></button>
             <button class="app__tab" role="tab" type="button" id="t-posts" aria-controls="p-posts" aria-selected="false" tabindex="-1"><span>Channel posts</span><span class="num">60,000</span></button>
             <button class="app__tab" role="tab" type="button" id="t-ig" aria-controls="p-ig" aria-selected="false" tabindex="-1"><span>Instagram</span><span class="num">60,000</span></button>
-            <button class="app__tab" role="tab" type="button" id="t-home" aria-controls="p-home" aria-selected="false" tabindex="-1"><span>Home screen</span><span class="num">26,000</span></button>
-            <button class="app__tab" role="tab" type="button" id="t-stand" aria-controls="p-stand" aria-selected="false" tabindex="-1"><span>Standings</span><span class="num">30,000</span></button>
-            <button class="app__tab" role="tab" type="button" id="t-cert" aria-controls="p-cert" aria-selected="false" tabindex="-1"><span>Certificates</span><span class="num">6,000</span></button>
-            <button class="app__tab" role="tab" type="button" id="t-entry" aria-controls="p-entry" aria-selected="false" tabindex="-1"><span>Entry page</span><span class="num">25,000</span></button>
+            <button class="app__tab" role="tab" type="button" id="t-home" aria-controls="p-home" aria-selected="false" tabindex="-1"><span>Tournament home screen</span><span class="num">26,000</span></button>
+            <button class="app__tab" role="tab" type="button" id="t-stand" aria-controls="p-stand" aria-selected="false" tabindex="-1"><span>Standings and protocols</span><span class="num">30,000</span></button>
+            <button class="app__tab" role="tab" type="button" id="t-cert" aria-controls="p-cert" aria-selected="false" tabindex="-1"><span>Stage certificates</span><span class="num">6,000</span></button>
+            <button class="app__tab" role="tab" type="button" id="t-entry" aria-controls="p-entry" aria-selected="false" tabindex="-1"><span>s10.run challenge entry page</span><span class="num">25,000</span></button>
           </div>
-          <div class="app__total"><span>Total</span><span class="num">428,000</span><small>Gross projected contacts, summed across the eight placements.</small></div>
+          <div class="app__total"><span>Total</span><span class="num">428,000</span><small>Gross projected contact volume, not deduplicated reach or a guarantee of impressions.</small></div>
         </div>
         <div class="app__pane">
           <div class="app__panel" role="tabpanel" id="p-email" aria-labelledby="t-email">
-            <div><h3>Stage emails</h3><p>12 announcements and 12 results emails, counted as sends.</p></div>
-            <div class="fit" role="img" aria-label="A results email with the partner's logo in its header"><div class="mk" aria-hidden="true">
-              <div class="mk-row"><b>s10.run</b><span class="mu">Stage 3 results</span></div>
-              <div class="mk-band"><div class="mk-row"><span class="mu">Sub3 Winter Challenge</span><span class="slot">Your brand</span></div><span class="t">Stage 3 results are in</span></div>
-              <span class="mk-btn">See the standings</span>
-            </div></div>
+            <div><h3>Stage emails</h3><p>12 announcements + 12 results sends</p></div>
+            <div class="fit" role="img" aria-label="Stage emails: where the partner's logo sits"><div class="mk" aria-hidden="true"><div class="mk-row"><b>Stage emails</b><span class="slot">Your brand</span></div><div class="mk-band"><span class="t">Sub3 Winter Challenge</span></div><div class="mk-list"><div><span>Announcements</span><span class="num">12</span></div><div><span>Results sends</span><span class="num">12</span></div></div></div></div>
           </div>
           <div class="app__panel" role="tabpanel" id="p-bot" aria-labelledby="t-bot" hidden>
-            <div><h3>Telegram bot</h3><p>12 stage notifications from the challenge bot.</p></div>
-            <div class="fit" role="img" aria-label="A Telegram bot message announcing a stage, presented by the partner"><div class="mk" aria-hidden="true">
-              <div class="mk-row" style="justify-content:flex-start"><svg class="mk-ico"><use href="#i-telegram"/></svg><b>s10.run bot</b></div>
-              <div class="mk-rule"></div>
-              <div class="mk-bubble"><span>Stage 4 of the Sub3 Winter Challenge is open this week.</span><span class="mk-row" style="justify-content:flex-start"><span class="mu">Presented by</span><span class="slot">Your brand</span></span></div>
-            </div></div>
+            <div><h3>Telegram bot</h3><p>12 stage notifications</p></div>
+            <div class="fit" role="img" aria-label="Telegram bot: where the partner's logo sits"><div class="mk" aria-hidden="true"><div class="mk-row"><span class="mk-row" style="justify-content:flex-start"><svg class="mk-ico"><use href="#i-telegram"/></svg><b>Telegram bot</b></span><span class="slot">Your brand</span></div><div class="mk-bubble"><span class="t">Sub3 Winter Challenge</span><span>Stage notification</span></div><div class="mk-list"><div><span>Stage notifications</span><span class="num">12</span></div></div></div></div>
           </div>
           <div class="app__panel" role="tabpanel" id="p-posts" aria-labelledby="t-posts" hidden>
-            <div><h3>Channel posts</h3><p>24 posts across @annarunning and @psychology_of_running.</p></div>
-            <div class="fit" role="img" aria-label="A Telegram channel post about a stage that names the partner"><div class="mk" aria-hidden="true">
-              <div class="mk-row"><span class="mk-row" style="justify-content:flex-start"><svg class="mk-ico"><use href="#i-telegram"/></svg><b>@annarunning</b></span><span class="mu">Channel</span></div>
-              <div class="mk-band"><span class="t">Stage 4: this week's task</span><span>How the stage works.</span></div>
-              <div class="mk-row" style="justify-content:flex-start"><span class="mu">With</span><span class="slot">Your brand</span></div>
-            </div></div>
+            <div><h3>Channel posts</h3><p>24 media placements across @annarunning and @psychology_of_running</p></div>
+            <div class="fit" role="img" aria-label="Channel posts: where the partner's logo sits"><div class="mk" aria-hidden="true"><div class="mk-row"><b>Channel posts</b><span class="slot">Your brand</span></div><div class="mk-list"><div><span>@annarunning</span></div><div><span>@psychology_of_running</span></div><div><span>Media placements</span><span class="num">24</span></div></div></div></div>
           </div>
           <div class="app__panel" role="tabpanel" id="p-ig" aria-labelledby="t-ig" hidden>
-            <div><h3>Instagram</h3><p>24 story and reel placements.</p></div>
-            <div class="fit" role="img" aria-label="An Instagram story about a stage with the partner's tag"><div class="mk" aria-hidden="true" style="flex-direction:row;align-items:center;gap:16px">
-              <div class="mk-story"><span class="mu">Stage 4</span><span class="t" style="font-size:14px">Sub3 Winter Challenge</span><span class="slot" style="height:20px;padding:0 5px;align-self:flex-start">Your brand</span></div>
-              <div style="display:flex;flex-direction:column;gap:9px;min-width:0"><div class="mk-row" style="justify-content:flex-start"><svg class="mk-ico" style="color:var(--ink)"><use href="#i-instagram"/></svg><b>Story</b></div><span>One story or reel around each stage, with the partner tagged.</span></div>
-            </div></div>
+            <div><h3>Instagram</h3><p>24 Instagram story and reel placements</p></div>
+            <div class="fit" role="img" aria-label="Instagram: where the partner's logo sits"><div class="mk" aria-hidden="true" style="flex-direction:row;align-items:center;gap:16px"><div class="mk-story"><span class="mu">Story</span><span class="t" style="font-size:14px">Sub3 Winter Challenge</span><span class="slot" style="height:20px;padding:0 5px;align-self:flex-start">Your brand</span></div><div style="display:flex;flex-direction:column;gap:9px;min-width:0"><div class="mk-row" style="justify-content:flex-start"><svg class="mk-ico" style="color:var(--ink)"><use href="#i-instagram"/></svg><b>Instagram</b></div><span>Story and reel placements</span><span class="t num">24</span></div></div></div>
           </div>
           <div class="app__panel" role="tabpanel" id="p-home" aria-labelledby="t-home" hidden>
-            <div><h3>Tournament home screen</h3><p>Banner for 12 weeks.</p></div>
-            <div class="fit" role="img" aria-label="The tournament home screen with the partner's banner at the top"><div class="mk" aria-hidden="true">
-              <div class="mk-row"><b>Home</b><span class="mu">s10.run</span></div>
-              <div class="mk-band" style="padding:12px"><div class="mk-row"><span class="t">Sub3 Winter Challenge</span></div><div class="mk-row" style="justify-content:flex-start"><span class="mu">Presented by</span><span class="slot">Your brand</span></div></div>
-              <div class="mk-row"><span>Stage 3</span><span class="mu">This week</span></div>
-            </div></div>
+            <div><h3>Tournament home screen</h3><p>Banner for 12 weeks</p></div>
+            <div class="fit" role="img" aria-label="Tournament home screen: where the partner's logo sits"><div class="mk" aria-hidden="true"><div class="mk-row"><b>Tournament home screen</b></div><div class="mk-band" style="padding:12px"><span class="t">Sub3 Winter Challenge</span><div class="mk-row" style="justify-content:flex-start"><span class="mu">Banner</span><span class="slot">Your brand</span></div></div><div class="mk-row"><span>Banner</span><span class="mu">12 weeks</span></div></div></div>
           </div>
           <div class="app__panel" role="tabpanel" id="p-stand" aria-labelledby="t-stand" hidden>
-            <div><h3>Standings and protocols</h3><p>Logo for 12 weeks.</p></div>
-            <div class="fit" role="img" aria-label="The stage standings with the partner's logo in the table header"><div class="mk" aria-hidden="true" style="gap:6px">
-              <div class="mk-row"><b>Standings · Stage 3</b><span class="slot">Your brand</span></div>
-              <div class="mk-list mu">
-                <div><span>1</span><span class="mk-bar" style="width:62%"></span><span>F 40–44</span></div>
-                <div><span>2</span><span class="mk-bar" style="width:58%"></span><span>M 35–39</span></div>
-                <div><span>3</span><span class="mk-bar" style="width:55%"></span><span>M 45–49</span></div>
-                <div><span>4</span><span class="mk-bar" style="width:51%"></span><span>F 35–39</span></div>
-                <div><span>5</span><span class="mk-bar" style="width:47%"></span><span>M 40–44</span></div>
-              </div>
-            </div></div>
+            <div><h3>Standings and protocols</h3><p>Logo for 12 weeks</p></div>
+            <div class="fit" role="img" aria-label="Standings and protocols: where the partner's logo sits"><div class="mk" aria-hidden="true" style="gap:6px"><div class="mk-row"><b>Standings and protocols</b><span class="slot">Your brand</span></div><div class="mk-list mu"><div><span>1</span><span class="mk-bar" style="width:78%"></span></div><div><span>2</span><span class="mk-bar" style="width:74%"></span></div><div><span>3</span><span class="mk-bar" style="width:70%"></span></div><div><span>4</span><span class="mk-bar" style="width:66%"></span></div><div><span>5</span><span class="mk-bar" style="width:62%"></span></div></div></div></div>
           </div>
           <div class="app__panel" role="tabpanel" id="p-cert" aria-labelledby="t-cert" hidden>
-            <div><h3>Stage certificates</h3><p>Up to 6,000 issued.</p></div>
-            <div class="fit" role="img" aria-label="A stage certificate with the partner's logo at its foot"><div class="mk mk--cert" aria-hidden="true">
-              <span class="mu">Certificate</span><span class="t" style="font-size:20px">Stage 3 completed</span><span>Sub3 Winter Challenge · s10.run</span><div class="mk-rule" style="width:56px;margin:4px 0"></div><span class="slot">Your brand</span>
-            </div></div>
+            <div><h3>Stage certificates</h3><p>Up to 6,000 issued</p></div>
+            <div class="fit" role="img" aria-label="Stage certificates: where the partner's logo sits"><div class="mk mk--cert" aria-hidden="true"><span class="mu">Stage certificate</span><span class="t" style="font-size:20px">Sub3 Winter Challenge</span><div class="mk-rule" style="width:56px;margin:4px 0"></div><span class="slot">Your brand</span><span class="mu">Up to 6,000 issued</span></div></div>
           </div>
           <div class="app__panel" role="tabpanel" id="p-entry" aria-labelledby="t-entry" hidden>
-            <div><h3>Challenge entry page</h3><p>Partner placement on the page where runners join.</p></div>
-            <div class="fit" role="img" aria-label="The challenge entry page with the partner's placement beside the join button"><div class="mk" aria-hidden="true">
-              <div class="mk-row"><span class="mu">s10.run · Challenges</span></div>
-              <span class="t" style="font-size:20px">Sub3 Winter Challenge</span>
-              <span>12 weekly stages, starting in January.</span>
-              <div class="mk-row" style="margin-top:auto"><span class="mk-btn">Join the challenge</span><span class="mk-row" style="justify-content:flex-end"><span class="mu">Partner</span><span class="slot">Your brand</span></span></div>
-            </div></div>
+            <div><h3>s10.run challenge entry page</h3><p>Partner placement on the challenge entry page</p></div>
+            <div class="fit" role="img" aria-label="s10.run challenge entry page: where the partner's logo sits"><div class="mk" aria-hidden="true"><div class="mk-row"><span class="mu">s10.run</span></div><span class="t" style="font-size:20px">Sub3 Winter Challenge</span><span>Challenge entry page</span><div class="mk-row" style="margin-top:auto;justify-content:flex-start"><span class="mu">Partner placement</span><span class="slot">Your brand</span></div></div></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 3 · the season (scroll scene): 84 sends and posts, counted stage by stage -->
-  <section class="section season" id="season" data-moment="season" aria-labelledby="season-h">
+  <!-- 3 · the total (scroll scene): the eight placement estimates of the proposal, summed as the page scrolls -->
+  <section class="section season" id="contacts" data-moment="season" aria-labelledby="season-h">
     <div class="season__stage"><div class="wrap">
-      <div class="section-head"><h2 id="season-h">84 sends and posts in one season</h2><p>Each stage brings two emails, a bot notification, two channel posts and two Instagram placements on average.</p></div>
+      <div class="section-head"><h2 id="season-h">428,000 gross contacts across placements</h2><p>The sum of the supplied placement estimates. Actual delivery should be confirmed in the post-season report.</p></div>
       <div class="season__body">
-        <p class="season__num" aria-hidden="true" data-s="num">84</p>
-        <div class="season__side">
-          <p class="season__stageno">Stage <span class="num" data-s="stage">12</span> of 12</p>
-          <ul class="rows season__list">
-            <li><span>Stage emails</span><span class="num" data-s="mail">24</span></li>
-            <li><span>Bot notifications</span><span class="num" data-s="bot">12</span></li>
-            <li><span>Channel posts</span><span class="num" data-s="post">24</span></li>
-            <li><span>Instagram placements</span><span class="num" data-s="ig">24</span></li>
-          </ul>
-        </div>
+        <p class="season__num" aria-hidden="true" data-s="num">428,000</p>
+        <ul class="rows season__list">
+          <li><span>Stage emails</span><span class="num">170,000</span></li>
+          <li><span>Telegram bot</span><span class="num">51,000</span></li>
+          <li><span>Channel posts</span><span class="num">60,000</span></li>
+          <li><span>Instagram</span><span class="num">60,000</span></li>
+          <li><span>Tournament home screen</span><span class="num">26,000</span></li>
+          <li><span>Standings and protocols</span><span class="num">30,000</span></li>
+          <li><span>Stage certificates</span><span class="num">6,000</span></li>
+          <li><span>s10.run challenge entry page</span><span class="num">25,000</span></li>
+        </ul>
       </div>
-      <div class="season__track" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-      <div class="season__ends" aria-hidden="true"><span>Stage 1</span><span>Stage 12</span></div>
+      <div class="season__track" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="season__ends"><span><span class="num" data-s="count">8</span> of 8 placement types</span><span>Email volume is based on sends</span></div>
     </div></div>
   </section>
 
-  <!-- 3 · the platform (statement; moment: word-highlight) -->
+  <!-- 4 · the platform (statement; moment: word-highlight) -->
   <section class="section mo-wh" id="platform" data-moment="word-highlight" aria-labelledby="platform-h">
     <div class="wrap">
-      <div class="section-head"><h2 id="platform-h">s10.run since 2020</h2></div>
-      <p class="mo-wh__text">s10.run has run online running challenges since 2020. Runners connect Garmin, Coros, Polar or Strava, follow their progress and compare results on leaderboards. The autumn 2026 tournament recorded about 8,000 participants across 13 stages, in a community of <strong>50,000+ members</strong>.</p>
+      <div class="section-head"><h2 id="platform-h">The s10.run platform</h2></div>
+      <p class="mo-wh__text">s10.run has operated online running challenges since 2020 and has a community of <strong>50,000+ members</strong>. Its autumn 2026 tournament recorded about 8,000 participants across 13 stages.</p>
     </div>
   </section>
 
-  <!-- 4 · audience -->
+  <!-- 5 · audience -->
   <section class="section" id="audience" aria-labelledby="audience-h">
     <div class="wrap">
-      <div class="section-head"><h2 id="audience-h">Audience by age and interest</h2><p>1,700+ of the members run in Europe, at different levels and with different goals.</p></div>
+      <div class="section-head"><h2 id="audience-h">A focused, high-intent running audience</h2><p>Runners in Europe with different experience levels, training routines and goals.</p></div>
       <div class="cards">
           <div class="card card--6">
-            <span class="t-label">Age groups</span>
-            <p class="stat" style="margin-top:var(--s-2)">69% are aged 35 to 54</p>
+            <span class="t-label">Who they are</span>
+            <p class="stat" style="margin-top:var(--s-2)">40% are aged 35–44</p>
             <dl class="bars">
               <div class="bars__row is-top"><dt>35–44</dt><span class="bars__track"><span class="bars__fill" style="--v:40%"></span></span><dd class="num">40%</dd></div>
               <div class="bars__row"><dt>45–54</dt><span class="bars__track"><span class="bars__fill" style="--v:29%"></span></span><dd class="num">29%</dd></div>
@@ -757,31 +747,31 @@ main>.season.is-live{height:340svh;min-height:0;padding:0}
             </dl>
           </div>
           <div class="card card--6">
-            <span class="t-label">Reported interests</span>
-            <p class="stat" style="margin-top:var(--s-2)">96% name sport as an interest</p>
-            <dl class="bars">
+            <span class="t-label">Reported interest profile</span>
+            <p class="stat" style="margin-top:var(--s-2)">96% sport</p>
+            <dl class="bars bars--wide">
               <div class="bars__row is-top"><dt>Sport</dt><span class="bars__track"><span class="bars__fill" style="--v:96%"></span></span><dd class="num">96%</dd></div>
               <div class="bars__row"><dt>Apparel</dt><span class="bars__track"><span class="bars__fill" style="--v:89%"></span></span><dd class="num">89%</dd></div>
-              <div class="bars__row"><dt>Health</dt><span class="bars__track"><span class="bars__fill" style="--v:85%"></span></span><dd class="num">85%</dd></div>
-              <div class="bars__row"><dt>Finance</dt><span class="bars__track"><span class="bars__fill" style="--v:79%"></span></span><dd class="num">79%</dd></div>
+              <div class="bars__row"><dt>Health and wellbeing</dt><span class="bars__track"><span class="bars__fill" style="--v:85%"></span></span><dd class="num">85%</dd></div>
+              <div class="bars__row"><dt>Financial services</dt><span class="bars__track"><span class="bars__fill" style="--v:79%"></span></span><dd class="num">79%</dd></div>
             </dl>
           </div>
       </div>
-      <p class="aud-note">Categories that fit: running footwear and gear, sports apparel, health and wellbeing, and services for people living abroad. The interest figures are s10.run's own; their method was not published.</p>
+      <p class="aud-note">Potential category fit: running footwear and gear, sports apparel, health and wellbeing, and services relevant to people living abroad. Interest figures and audience behaviours are supplied in the original proposal; methodology was not included.</p>
     </div>
   </section>
 
-  <!-- 5 · packages (pricing-three) -->
+  <!-- 6 · partnership options (pricing-three) -->
   <section class="section g2 g2--cards" id="packages" aria-labelledby="packages-h">
     <div class="wrap">
       <div class="g2a">
-        <div class="section-head"><h2 id="packages-h">Three partnership packages</h2><p>Each package runs for the full winter season.</p></div>
+        <div class="section-head"><h2 id="packages-h">Choose your level of presence</h2><p>€3,500 title · €1,500 category · prize in kind</p></div>
           <div class="card card--4 plan plan--main">
             <span class="t-label">Recommended</span>
             <h3 class="card__title">Title partner</h3>
             <p class="stat">€3,500</p>
-            <p class="plan__sub">Full season, category exclusive</p>
-            <ul class="rows"><li>Tournament naming rights</li><li>All eight placements</li><li>Media support across partner channels</li><li>Post-season audience report</li></ul>
+            <p class="plan__sub">Full season · category exclusive</p>
+            <ul class="rows"><li>Tournament naming rights</li><li>All placements listed above</li><li>Media support across partner channels</li><li>Post-season audience report</li></ul>
           </div>
       </div>
       <div class="g2b">
@@ -789,98 +779,83 @@ main>.season.is-live{height:340svh;min-height:0;padding:0}
             <span class="t-label"></span>
             <h3 class="card__title">Category partner</h3>
             <p class="stat">€1,500</p>
-            <p class="plan__sub">Full season, shared visibility</p>
-            <ul class="rows"><li>Logo on emails, standings and certificates</li><li>Six channel and story placements</li><li>One selected media placement</li><li>Post-season report</li></ul>
+            <p class="plan__sub">Full season · shared visibility</p>
+            <ul class="rows"><li>Logo on emails, standings and certificates</li><li>Six channel and story placements</li><li>Selected media support placement</li><li>Post-season report</li></ul>
           </div>
           <div class="card card--4 plan">
             <span class="t-label"></span>
             <h3 class="card__title">Prize partner</h3>
             <p class="stat">In kind</p>
-            <p class="plan__sub">Product contribution, no fee</p>
-            <ul class="rows"><li>Products as stage and season prizes</li><li>Brand mention in prize announcements</li><li>Logo on the prize page</li></ul>
+            <p class="plan__sub">Product contribution · no fee</p>
+            <ul class="rows"><li>Products as stage and season prizes</li><li>Brand mention in prize announcements</li><li>Logo on prize page</li></ul>
           </div>
       </div>
     </div>
   </section>
 
-  <!-- 6 · the challenge (moment: pinned-chapters) -->
+  <!-- 7 · the challenge (moment: pinned-chapters) -->
   <section class="section pc" id="challenge" data-moment="pinned-chapters" aria-labelledby="challenge-h">
     <div class="pc__stage"><div class="wrap">
-      <div class="section-head"><h2 id="challenge-h">One stage week on s10.run</h2></div>
+      <div class="section-head"><h2 id="challenge-h">One season. Twelve weekly stages. Multiple running challenges.</h2></div>
       <div class="pc__steps">
         <div class="pc__step is-on">
-          <h3>Connect a watch or an app</h3>
-          <p><span>Participants link Garmin, Coros, Polar or Strava, and s10.run tracks their activity from there.</span></p>
-          <div class="pc__visual fit" role="img" aria-label="The list of services a runner can connect: Garmin, Coros, Polar and Strava"><div class="mk" aria-hidden="true" style="gap:4px">
-            <div class="mk-row"><b>Connect a device</b></div>
-            <div class="mk-list"><div><span>Garmin</span><span class="chip chip--on" style="height:20px">Connected</span></div><div><span>Coros</span><span class="mu">Connect</span></div><div><span>Polar</span><span class="mu">Connect</span></div><div><span>Strava</span><span class="mu">Connect</span></div></div>
+          <h3>Train and compete</h3>
+          <p><span>Participants connect Garmin, Coros, Polar or Strava and take part in different running challenges on s10.run. The platform supports runners of different levels and tracks activity and progress through challenge formats and leaderboards.</span></p>
+          <div class="pc__visual fit" role="img" aria-label="Garmin, Coros, Polar and Strava, the services participants connect"><div class="mk" aria-hidden="true" style="gap:4px">
+            <div class="mk-row"><b>Participants connect</b><span class="mu">s10.run</span></div>
+            <div class="mk-list"><div><span>Garmin</span></div><div><span>Coros</span></div><div><span>Polar</span></div><div><span>Strava</span></div></div>
           </div></div>
         </div>
         <div class="pc__step">
-          <h3>Run the weekly stage</h3>
-          <p><span>The season has 12 weekly stages. Each challenge sets its own format and rules.</span></p>
-          <div class="pc__visual fit" role="img" aria-label="A stage card showing stage 4 of 12 in progress"><div class="mk" aria-hidden="true">
-            <div class="mk-row"><span class="mu">Sub3 Winter Challenge</span><span class="chip chip--on">This week</span></div>
-            <span class="t" style="font-size:24px">Stage 4 of 12</span>
-            <div class="mk-dots"><i class="done" style="--i:0"></i><i class="done" style="--i:1"></i><i class="done" style="--i:2"></i><i class="now" style="--i:3"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-            <div class="mk-row" style="margin-top:auto"><span>Three stages finished</span><span class="mu">Eight to go</span></div>
+          <h3>Track progress</h3>
+          <p><span>Participants follow their progress through the challenge and compare results on the leaderboard.</span></p>
+          <div class="pc__visual fit" role="img" aria-label="Twelve weekly stages of the Sub3 Winter Challenge"><div class="mk" aria-hidden="true">
+            <div class="mk-row"><span class="mu">Sub3 Winter Challenge</span></div>
+            <span class="t" style="font-size:24px">Twelve weekly stages</span>
+            <div class="mk-dots"><i class="done" style="--i:0"></i><i class="done" style="--i:1"></i><i class="done" style="--i:2"></i><i class="done" style="--i:3"></i><i class="done" style="--i:4"></i><i class="done" style="--i:5"></i><i class="done" style="--i:6"></i><i class="done" style="--i:7"></i><i class="done" style="--i:8"></i><i class="done" style="--i:9"></i><i class="done" style="--i:10"></i><i class="done" style="--i:11"></i></div>
+            <div class="mk-row" style="margin-top:auto"><span>Progress</span><span class="mu">Leaderboard</span></div>
           </div></div>
         </div>
         <div class="pc__step">
-          <h3>Follow the leaderboard</h3>
-          <p><span>Results follow the rules of each challenge. Runners track their progress and compare places.</span></p>
-          <div class="pc__visual fit" role="img" aria-label="A leaderboard with the runner's own row marked"><div class="mk" aria-hidden="true" style="gap:6px">
-            <div class="mk-row"><b>Leaderboard</b><span class="mu">Stage 4</span></div>
-            <div class="mk-list mu">
-              <div><span>12</span><span class="mk-bar" style="width:58%"></span><span>M 35–39</span></div>
-              <div><span>13</span><span class="mk-bar" style="width:56%"></span><span>F 40–44</span></div>
-              <div class="is-you"><span>14</span><span class="mk-bar" style="width:54%;background:var(--accent)"></span><span>You</span></div>
-              <div><span>15</span><span class="mk-bar" style="width:51%"></span><span>M 45–49</span></div>
-              <div><span>16</span><span class="mk-bar" style="width:49%"></span><span>F 35–39</span></div>
-            </div>
-          </div></div>
-        </div>
-        <div class="pc__step">
-          <h3>Collect a stage certificate</h3>
-          <p><span>Finishers receive a certificate for each stage, up to 6,000 across the season, each with the partner's logo.</span></p>
-          <div class="pc__visual fit" role="img" aria-label="A runner's certificate for a finished stage"><div class="mk mk--cert" aria-hidden="true">
-            <span class="mu" style="--i:0">s10.run</span><span class="t" style="font-size:20px;--i:1">Stage 4 certificate</span><span style="--i:2">Awarded for a finished stage of the Sub3 Winter Challenge</span><span class="mk-btn" style="align-self:center;margin-top:4px;--i:3">Download the certificate</span>
+          <h3>Challenge leaderboards</h3>
+          <p><span>Each challenge has its own format, stages and leaderboard, with results determined by the relevant challenge rules.</span></p>
+          <div class="pc__visual fit" role="img" aria-label="A challenge leaderboard"><div class="mk" aria-hidden="true" style="gap:6px">
+            <div class="mk-row"><b>Leaderboard</b><span class="mu">Challenge rules</span></div>
+            <div class="mk-list mu"><div><span>1</span><span class="mk-bar" style="width:80%"></span></div><div><span>2</span><span class="mk-bar" style="width:76%"></span></div><div><span>3</span><span class="mk-bar" style="width:72%"></span></div><div><span>4</span><span class="mk-bar" style="width:68%"></span></div><div><span>5</span><span class="mk-bar" style="width:64%"></span></div></div>
           </div></div>
         </div>
       </div>
     </div></div>
   </section>
 
-  <!-- 7 · questions -->
-  <section class="section g2 faq" id="questions" aria-labelledby="questions-h">
+  <!-- 8 · delivery team -->
+  <section class="section g2 faq" id="team" aria-labelledby="team-h">
     <div class="wrap">
       <div class="g2a">
-        <h2 id="questions-h">Questions from partners</h2>
-        <div class="faq__item"><h3>When does the season start?</h3><p>In January, for 12 weekly stages. Participants receive the announcement at least six weeks before the start.</p></div>
-        <div class="faq__item"><h3>How are the contacts counted?</h3><p>428,000 is the sum of the projections for all eight placements. It is gross volume with no deduplication, email is counted in sends, and none of it is a guarantee of impressions.</p></div>
-        <div class="faq__item"><h3>What does the post-season report show?</h3><p>The delivery each placement reached, sent to title and category partners after the last stage.</p></div>
+        <h2 id="team-h">Experienced runners, coaches and platform operators</h2>
+        <div class="faq__item"><h3>Anna Iogansen</h3><p>Running coach and creator covering running psychology and sports science. Silver medallist in F40 at the 2026 World Age-Group Championships.</p></div>
+        <div class="faq__item"><h3>Yuri Strofilov</h3><p>Founder of s10.run and two-time world age-group champion. The platform has run online tournaments since 2020.</p></div>
       </div>
       <div class="g2b">
-        <div class="faq__item"><h3>Who runs the challenge?</h3><p>Anna Iogansen, a running coach and F40 silver medallist at the 2026 World Age-Group Championships, and Yuri Strofilov, founder of s10.run and two-time world age-group champion.</p></div>
-        <div class="faq__item"><h3>Can a partner join after the start?</h3><p>Yes. Partnership talks can take place before or during the tournament.</p></div>
+        <div class="faq__item"><h3>Platform and audience figures</h3><p>50,000+ members on s10.run, including 1,700+ runners in Europe. Media contact volumes are projections based on the supplied placement estimates; the 428,000 total is their arithmetic sum. It is gross projected contact volume, not unique reach or a guarantee. Actual delivery should be confirmed in the post-season report.</p></div>
       </div>
     </div>
   </section>
 </main>
 
-<!-- 8 · close-type + footer-statement -->
+<!-- 9 · close-type + footer-statement -->
 <footer class="footer closing footer--statement" id="contact">
   <div class="wrap">
     <div class="closing__cta close--type">
-      <h2>Partnership talks for the January start</h2>
-      <p>The winter season starts in January, and runners hear about it at least six weeks earlier.</p>
+      <h2>Let’s build the partnership.</h2>
+      <p>The winter season starts in January. Participants should receive the challenge announcement at least six weeks before the start, giving them enough time to prepare and join. Partnership discussions can take place before or during the tournament.</p>
       <a class="btn btn--primary btn--xl" href="https://s10.run/partners">Discuss partnership<svg class="m-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
     </div>
     <div class="closing__links">
       <a class="nav__logo footer__brand" href="#top" aria-label="s10.run, to the top of the page"><svg class="mark" aria-hidden="true"><use href="#i-stack"/></svg>s10.run</a>
-      <nav class="footer__col footer__col--nav" aria-label="Proposal"><h3>Proposal</h3><a href="#placements">Placements</a><a href="#audience">Audience</a><a href="#packages">Packages</a><a href="#challenge">Challenge</a><a href="#questions">Questions</a></nav>
-      <div class="footer__col"><h3>Contact</h3><a href="https://t.me/annarunning">Message Anna Iogansen on Telegram</a></div>
-      <p class="footer__legal"><span>s10.run, 2026</span><span>Contact volumes are projections. The post-season report confirms delivery.</span><span>Product names and logos are trademarks of their owners.</span></p>
+      <nav class="footer__col footer__col--nav" aria-label="Proposal"><h3>Proposal</h3><a href="#placements">Placements</a><a href="#audience">Audience</a><a href="#packages">Packages</a><a href="#challenge">Challenge</a><a href="#team">Team</a></nav>
+      <div class="footer__col"><h3>Contact</h3><a href="https://t.me/annarunning">Anna Iogansen · Telegram</a></div>
+      <p class="footer__legal"><span>s10.run</span><span>Audience and contact volumes include estimates.</span><span>Product names and logos are trademarks of their owners.</span></p>
     </div>
   </div>
 </footer>
@@ -991,7 +966,7 @@ main>.season.is-live{height:340svh;min-height:0;padding:0}
     var seen=new Map();
     var mark=function(sel,type,step,base){$$(sel).forEach(function(el){if(el.closest('.hero'))return;var sec=el.closest('section,footer'),k=sel+'|'+(sec?sec.id:''),i=seen.get(k)||0;seen.set(k,i+1);el.setAttribute('data-rv',type);var dl=(base||0)+i*(step||0);if(dl)el.style.setProperty('--rv-d',dl+'ms')})};
     mark('main>section:not(.hero) h2,footer.closing h2','clip');
-    mark('.section-head p,.closing__cta p,.aud-note,.mo-wh__text,.season__side,.season__track,.season__ends','up',0,140);
+    mark('.section-head p,.closing__cta p,.aud-note,.mo-wh__text,.season__list,.season__track,.season__ends','up',0,140);
     mark('.app,.season__num','zoom',0,120);
     mark('.card','up',120,120);mark('.faq__item','up',90,100);
     mark('.closing__cta .btn--xl','up',0,260);mark('.closing__links','up',0,200);
@@ -1004,15 +979,16 @@ main>.season.is-live{height:340svh;min-height:0;padding:0}
     window.__rvReady=true;var rvTimer=setInterval(function(){rvCheck(innerHeight);if(!$('[data-rv]:not(.is-in)'))clearInterval(rvTimer)},600);
   }
 
-  // the season scene
-  var season=$('.season'),sLast=-1,sEl={};
-  if(season){['num','stage','mail','bot','post','ig'].forEach(function(k){sEl[k]=$('[data-s="'+k+'"]',season)});var segs=$$('.season__track i',season)}
-  function setSeason(v){if(!season||v===sLast)return;sLast=v;var full=Math.floor(v/7),r=v%7;
-    sEl.num.textContent=v;sEl.stage.textContent=Math.max(1,Math.min(12,full+(r?1:0)));
-    sEl.mail.textContent=2*full+(r>=1?1:0);sEl.bot.textContent=full+(r>=2?1:0);sEl.post.textContent=2*full+(r>=3?1:0)+(r>=5?1:0);sEl.ig.textContent=2*full+(r>=4?1:0)+(r>=6?1:0);
-    segs.forEach(function(s,i){s.style.setProperty('--f',Math.max(0,Math.min(1,v/7-i)).toFixed(3))});season.classList.toggle('is-done',v===84)}
+  // the scroll scene: the eight placement estimates of the proposal, summed one by one
+  var season=$('.season'),sLast=-1,sEl={},segs=[],sRows=[],sVals=[170000,51000,60000,60000,26000,30000,6000,25000];
+  if(season){sEl.num=$('[data-s="num"]',season);sEl.count=$('[data-s="count"]',season);segs=$$('.season__track i',season);sRows=$$('.season__list li',season)}
+  function setSeason(x){if(!season)return;var key=Math.round(x*400);if(key===sLast)return;sLast=key;var full=Math.min(8,Math.floor(x)),sum=0,i;
+    for(i=0;i<full;i++)sum+=sVals[i];if(full<8)sum+=Math.round(sVals[full]*(x-full)/1000)*1000;
+    sEl.num.textContent=sum.toLocaleString('en-US');sEl.count.textContent=Math.min(8,Math.ceil(x));
+    sRows.forEach(function(r,n){r.classList.toggle('is-on',n<x)});
+    segs.forEach(function(sg,n){sg.style.setProperty('--f',Math.max(0,Math.min(1,x-n)).toFixed(3))});season.classList.toggle('is-done',x>=8)}
   var sMq=matchMedia('(min-height:600px)');
-  function seasonMode(){if(!season)return;var on=!reduced&&sMq.matches;season.classList.toggle('is-live',on);if(!on)setSeason(84);onScroll()}
+  function seasonMode(){if(!season)return;var on=!reduced&&sMq.matches;season.classList.toggle('is-live',on);if(!on)setSeason(8);onScroll()}
   if(sMq.addEventListener)sMq.addEventListener('change',seasonMode);
 
   // scroll-linked: the nav's progress line, the current nav word, the hero leaving, the season counter
@@ -1020,10 +996,10 @@ main>.season.is-live{height:340svh;min-height:0;padding:0}
   extra=function(vh){
     var max=Math.max(1,d.documentElement.scrollHeight-vh);navEl.style.setProperty('--sp',Math.min(1,scrollY/max).toFixed(4));
     var cur=-1;navSecs.forEach(function(sec,i){if(sec&&sec.getBoundingClientRect().top<=vh*.45)cur=i});
-    var q=$('#questions');if(q&&cur>-1){var last=navSecs[cur].getBoundingClientRect();if(last.bottom<vh*.3)cur=-1}
+    var q=$('#team');if(q&&cur>-1){var last=navSecs[cur].getBoundingClientRect();if(last.bottom<vh*.3)cur=-1}
     navLinks.forEach(function(a,i){if(i===cur)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current')});
     if(!reduced&&heroEl)heroEl.style.setProperty('--hs',Math.max(0,Math.min(1,scrollY/vh)).toFixed(3));
-    if(season&&season.classList.contains('is-live')){var r=season.getBoundingClientRect(),p=Math.max(0,Math.min(1,-r.top/Math.max(1,r.height-vh)));setSeason(Math.min(84,Math.round(Math.max(0,(p-.04)/.84)*84)))}
+    if(season&&season.classList.contains('is-live')){var r=season.getBoundingClientRect(),p=Math.max(0,Math.min(1,-r.top/Math.max(1,r.height-vh)));setSeason(Math.min(8,Math.max(0,(p-.04)/.84)*8))}
     rvCheck(vh)};
   seasonMode();
 
